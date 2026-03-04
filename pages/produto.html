@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalhes do produto - PROJETO PORTFÓLIO">
+    <title>Produto - Presentes Especiais | PROJETO PORTFÓLIO</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Banner de Portfólio -->
+    <div class="portfolio-banner">
+        <div class="container">
+            <p>
+                <strong>📋 PROJETO DE PORTFÓLIO</strong> - Este é um site demonstrativo. Nenhuma transação real será processada.
+            </p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/Logoroofc (1).png" alt="Logo Presentes Especiais" class="header-logo">
+                    </a>
+                </div>
+                
+                <nav class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Início</a></li>
+                        <li><a href="produtos.html" class="nav-link">Produtos</a></li>
+                        <li><a href="categorias.html" class="nav-link">Categorias</a></li>
+                        <li><a href="ofertas.html" class="nav-link">Ofertas</a></li>
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar produtos..." class="search-input" id="searchInput">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <button class="cart-btn" id="cartBtn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Início</a>
+                <span>›</span>
+                <a href="../index.html#produtos">Produtos</a>
+                <span>›</span>
+                <span id="breadcrumbProduct">Produto</span>
+            </div>
+
+            <div class="product-detail" id="productDetail">
+                <!-- Product details will be loaded here -->
+                <div class="loading-message">Carregando produto...</div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products">
+                <h2 class="section-title">Produtos Relacionados</h2>
+                <div class="products-grid" id="relatedProducts">
+                    <!-- Related products will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Presentes Especiais</h3>
+                    <p class="footer-text">Projeto demonstrativo de e-commerce desenvolvido para portfólio. Transformando momentos em memórias inesquecíveis através de presentes cuidadosamente selecionados.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Sobre Este Projeto</h4>
+                    <ul class="footer-links">
+                        <li>✅ Interface moderna e responsiva</li>
+                        <li>✅ Experiência de usuário otimizada</li>
+                        <li>✅ Código limpo e organizado</li>
+                        <li>✅ Pronto para customização</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Informações</h4>
+                    <p><strong>⚠️ IMPORTANTE:</strong></p>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        Este é um projeto de demonstração para portfólio. 
+                        Nenhuma transação financeira real será processada. 
+                        Para um e-commerce funcional completo, entre em contato.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Presentes Especiais - Projeto Portfólio | Desenvolvido como demonstração técnica</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h3>Carrinho de Compras</h3>
+                <button class="close-modal" id="closeCartModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="cart-modal-body" id="cartItems">
+                <p class="empty-cart">Seu carrinho está vazio</p>
+            </div>
+            <div class="cart-modal-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">R$ 0,00</span>
+                </div>
+                <button class="btn btn-primary btn-block" onclick="openDemoCheckoutModal()">Finalizar Compra</button>
+                <p style="font-size: 0.85rem; color: #999; text-align: center; margin-top: 8px;">💡 Este é um carrinho demonstrativo</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Checkout Modal -->
+    <div class="demo-checkout-modal" id="demoCheckoutModal">
+        <div class="demo-checkout-content">
+            <button class="close-modal" onclick="closeDemoCheckoutModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <div class="demo-checkout-body">
+                <div class="demo-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ff9800" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 8v4M12 16h.01"></path>
+                    </svg>
+                </div>
+                <h3>Versão Demonstrativa</h3>
+                <p>
+                    Esta é uma versão de <strong>portfólio</strong> e não processa pagamentos reais.
+                    Você pode navegar e simular compras, mas nenhuma transação financeira será realizada.
+                </p>
+                <div class="demo-features-box">
+                    <h4>Em um site completo, você teria:</h4>
+                    <ul>
+                        <li>✅ Integração com gateways de pagamento</li>
+                        <li>✅ Processamento seguro de transações</li>
+                        <li>✅ Confirmação por e-mail e WhatsApp</li>
+                        <li>✅ Rastreamento de pedidos em tempo real</li>
+                        <li>✅ Painel administrativo para gestão</li>
+                        <li>✅ Sistema de cupons e descontos</li>
+                    </ul>
+                </div>
+                <div class="demo-cta-buttons">
+                    <p><strong>Interessado em ter um e-commerce assim?</strong></p>
+                    <button class="btn btn-primary" onclick="enviarPedidoWhatsApp()">💬 Solicitar Orçamento</button>
+                    <button class="btn btn-outline" onclick="closeDemoCheckoutModal()">Voltar à Loja</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/produto-detail.js"></script>
+</body>
+</html>

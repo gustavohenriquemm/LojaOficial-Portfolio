@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Todos os produtos - PROJETO PORTFÓLIO">
+    <title>Todos os Produtos - Presentes Especiais | PROJETO PORTFÓLIO</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Banner de Portfólio -->
+    <div class="portfolio-banner">
+        <div class="container">
+            <p>
+                <strong>📋 PROJETO DE PORTFÓLIO</strong> - Este é um site demonstrativo. Nenhuma transação real será processada.
+            </p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/Logoroofc (1).png" alt="Logo Presentes Especiais" class="header-logo">
+                    </a>
+                </div>
+                
+                <nav class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Início</a></li>
+                        <li><a href="../index.html#produtos" class="nav-link active">Produtos</a></li>
+                        <li><a href="categorias.html" class="nav-link">Categorias</a></li>
+                        <li><a href="ofertas.html" class="nav-link">Ofertas</a></li>
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar produtos..." class="search-input" id="searchInput">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <button class="cart-btn" id="cartBtn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="all-products-section" style="padding: 80px 0; min-height: 60vh;">
+        <div class="container">
+            <div class="page-header" style="text-align: center; margin-bottom: 50px;">
+                <h1 style="font-size: 2.5rem; color: #2c2c2c; margin-bottom: 15px;">Todos os Produtos</h1>
+                <p style="font-size: 1.1rem; color: #6b6b6b;">Confira nossa seleção completa de presentes especiais</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters-container" style="margin-bottom: 40px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                <button class="filter-btn active" onclick="filterProducts('todos')" style="padding: 10px 25px; border: 2px solid #ffbdbd; background: #ffbdbd; color: white; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s;">Todos</button>
+                <button class="filter-btn" onclick="window.location.href='cosmetico-feminino.html'" style="padding: 10px 25px; border: 2px solid #ffbdbd; background: white; color: #ffbdbd; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s;">Cosmético Feminino</button>
+                <button class="filter-btn" onclick="window.location.href='cosmetico-masculino.html'" style="padding: 10px 25px; border: 2px solid #ffbdbd; background: white; color: #ffbdbd; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s;">Cosmético Masculino</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="allProductsGrid" style="min-height: 300px;">
+                <p style="text-align: center; color: #999;">Carregando produtos...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Presentes Especiais</h3>
+                    <p class="footer-text">Projeto demonstrativo de e-commerce desenvolvido para portfólio.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Sobre Este Projeto</h4>
+                    <ul class="footer-links">
+                        <li>✅ Interface moderna e responsiva</li>
+                        <li>✅ Experiência de usuário otimizada</li>
+                        <li>✅ Código limpo e organizado</li>
+                        <li>✅ Pronto para customização</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Informações</h4>
+                    <p><strong>⚠️ IMPORTANTE:</strong></p>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        Este é um projeto de demonstração para portfólio. 
+                        Nenhuma transação financeira real será processada.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Presentes Especiais - Projeto Portfólio</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h3>Carrinho de Compras</h3>
+                <button class="close-modal" id="closeCartModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="cart-modal-body" id="cartItems">
+                <p class="empty-cart">Seu carrinho está vazio</p>
+            </div>
+            <div class="cart-modal-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">R$ 0,00</span>
+                </div>
+                <button class="btn btn-primary btn-block" onclick="openDemoCheckoutModal()">Finalizar Compra</button>
+                <p style="font-size: 0.85rem; color: #999; text-align: center; margin-top: 8px;">💡 Este é um carrinho demonstrativo</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Checkout Modal -->
+    <div class="demo-checkout-modal" id="demoCheckoutModal">
+        <div class="demo-checkout-content">
+            <button class="close-modal" onclick="closeDemoCheckoutModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <div class="demo-checkout-body">
+                <div class="demo-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ff9800" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 8v4M12 16h.01"></path>
+                    </svg>
+                </div>
+                <h3>Versão Demonstrativa</h3>
+                <p>
+                    Esta é uma versão de <strong>portfólio</strong> e não processa pagamentos reais.
+                </p>
+                <div class="demo-features-box">
+                    <h4>Em um site completo, você teria:</h4>
+                    <ul>
+                        <li>✅ Integração com gateways de pagamento</li>
+                        <li>✅ Processamento seguro de transações</li>
+                        <li>✅ Confirmação por e-mail e WhatsApp</li>
+                        <li>✅ Rastreamento de pedidos em tempo real</li>
+                        <li>✅ Painel administrativo para gestão</li>
+                        <li>✅ Sistema de cupons e descontos</li>
+                    </ul>
+                </div>
+                <div class="demo-cta-buttons">
+                    <p><strong>Interessado em ter um e-commerce assim?</strong></p>
+                    <button class="btn btn-primary" onclick="enviarPedidoWhatsApp()">💬 Solicitar Orçamento</button>
+                    <button class="btn btn-outline" onclick="closeDemoCheckoutModal()">Voltar à Loja</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Display all products on page load
+        function displayAllProductsPage() {
+            const container = document.getElementById('allProductsGrid');
+            if (!container || !products || products.length === 0) return;
+
+            container.innerHTML = products.map(product => `
+                <div class="product-card">
+                    <a href="produto.html?id=${product.id}" class="product-card-link">
+                        <div class="product-image">
+                            ${product.image 
+                                ? `<img src="../${product.image}" alt="${product.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                   <div class="product-placeholder" style="display: none;">
+                                       <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5">
+                                           <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                           <circle cx="12" cy="12" r="3"></circle>
+                                       </svg>
+                                   </div>`
+                                : `<div class="product-placeholder">
+                                       <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5">
+                                           <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                           <circle cx="12" cy="12" r="3"></circle>
+                                       </svg>
+                                   </div>`
+                            }
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">${product.category}</div>
+                            <h3 class="product-name">${product.name}</h3>
+                            <p class="product-description">${product.description}</p>
+                            <div class="product-footer">
+                                <div>
+                                    <div class="product-price">${formatPrice(product.price)}</div>
+                                    ${product.oldPrice ? `<div class="product-old-price">${formatPrice(product.oldPrice)}</div>` : ''}
+                                </div>
+                                <button class="add-to-cart-btn" onclick="event.preventDefault(); event.stopPropagation(); addToCart('${product.id}'); return false;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                    Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        // Filter products
+        function filterProducts(category) {
+            const container = document.getElementById('allProductsGrid');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            filterBtns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filter and display
+            const filtered = category === 'todos' 
+                ? products 
+                : products.filter(p => p.category === category);
+
+            container.innerHTML = filtered.map(product => `
+                <div class="product-card">
+                    <a href="produto.html?id=${product.id}" class="product-card-link">
+                        <div class="product-image">
+                            ${product.image 
+                                ? `<img src="../${product.image}" alt="${product.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                   <div class="product-placeholder" style="display: none;">
+                                       <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5">
+                                           <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                           <circle cx="12" cy="12" r="3"></circle>
+                                       </svg>
+                                   </div>`
+                                : `<div class="product-placeholder">
+                                       <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5">
+                                           <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                           <circle cx="12" cy="12" r="3"></circle>
+                                       </svg>
+                                   </div>`
+                            }
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">${product.category}</div>
+                            <h3 class="product-name">${product.name}</h3>
+                            <p class="product-description">${product.description}</p>
+                            <div class="product-footer">
+                                <div>
+                                    <div class="product-price">${formatPrice(product.price)}</div>
+                                    ${product.oldPrice ? `<div class="product-old-price">${formatPrice(product.oldPrice)}</div>` : ''}
+                                </div>
+                                <button class="add-to-cart-btn" onclick="event.preventDefault(); event.stopPropagation(); addToCart('${product.id}'); return false;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                    Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        // Wait for products to load
+        setTimeout(displayAllProductsPage, 500);
+        
+        // Style for filter buttons
+        const filterStyle = document.createElement('style');
+        filterStyle.textContent = `
+            .filter-btn:hover {
+                background: #ffbdbd !important;
+                color: white !important;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(255, 189, 189, 0.3);
+            }
+            .filter-btn.active {
+                background: #ffbdbd !important;
+                color: white !important;
+            }
+        `;
+        document.head.appendChild(filterStyle);
+    </script>
+</body>
+</html>

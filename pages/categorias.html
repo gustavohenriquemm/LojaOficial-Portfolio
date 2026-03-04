@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore nossas categorias de produtos especiais">
+    <title>Categorias - Presentes Especiais | PROJETO PORTFÓLIO</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="portfolio-banner">
+        <div class="container">
+            <p><strong> PROJETO DE PORTFÓLIO</strong> - Este é um site demonstrativo. Nenhuma transação real será processada.</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../img/Logoroofc (1).png" alt="Logo Presentes Especiais" class="header-logo">
+                </div>
+                
+                <nav class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Início</a></li>
+                        <li><a href="produtos.html" class="nav-link">Produtos</a></li>
+                        <li><a href="categorias.html" class="nav-link">Categorias</a></li>
+                        <li><a href="ofertas.html" class="nav-link">Ofertas</a></li>
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar produtos..." class="search-input" id="searchInput">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <button class="cart-btn" id="cartBtn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Nossas Categorias</h1>
+            <p class="page-subtitle">Explore nossa variedade de produtos organizados por categoria</p>
+        </div>
+    </section>
+
+    <!-- Categories Detailed Section -->
+    <section class="categories-detailed">
+        <div class="container">
+            <!-- Cosmético Feminino -->
+            <div class="category-detail" id="feminino">
+                <div class="category-detail-content">
+                    <div class="category-detail-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5">
+                            <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"></path>
+                            <path d="M9 21h6"></path>
+                        </svg>
+                    </div>
+                    <div class="category-detail-text">
+                        <h2 class="category-detail-title">Cosmético Feminino</h2>
+                        <p class="category-detail-description">
+                            Descubra nossa linha completa de produtos de beleza femininos. Perfumes sofisticados, cremes hidratantes, 
+                            sabonetes delicados, body splash refrescantes, esfoliantes revitalizantes e muito mais para cuidar da sua beleza.
+                        </p>
+                        <a href="cosmetico-feminino.html" class="btn btn-primary">Ver Produtos</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cosmético Masculino -->
+            <div class="category-detail" id="masculino">
+                <div class="category-detail-content reverse">
+                    <div class="category-detail-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <div class="category-detail-text">
+                        <h2 class="category-detail-title">Cosmético Masculino</h2>
+                        <p class="category-detail-description">
+                            Produtos de cuidados pessoais masculinos de alta qualidade. Perfumes marcantes, cremes faciais, 
+                            sabonetes refrescantes, body splash energizantes, esfoliantes e produtos especiais para o homem moderno.
+                        </p>
+                        <a href="cosmetico-masculino.html" class="btn btn-primary">Ver Produtos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Presentes Especiais</h3>
+                    <p class="footer-text">Transformando momentos em memórias inesquecíveis através de presentes cuidadosamente selecionados.</p>
+                    <p class="portfolio-notice"><strong> PROJETO DE PORTFÓLIO</strong> - Site demonstrativo sem transações reais.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Atendimento</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Trocas e Devoluções</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contato</h4>
+                    <ul class="footer-contact">
+                        <li>📧 contato@presentesespeciais.com.br</li>
+                        <li>📱 (11) 98765-4321</li>
+                        <li>📍 São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Presentes Especiais. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h3>Carrinho de Compras</h3>
+                <button class="close-modal" id="closeCartModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="cart-modal-body" id="cartItems">
+                <p class="empty-cart">Seu carrinho está vazio</p>
+            </div>
+            <div class="cart-modal-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">R$ 0,00</span>
+                </div>
+                <button class="btn btn-primary btn-block" id="finalizarCompraBtn" onclick="openDemoCheckoutModal()">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
