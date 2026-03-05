@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Dados - Debug</title>
+    <link rel="icon" type="image/png" href="../img/Logoroofc (1).png">
+    <script src="../js/favicon-generator.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #ffbdbd;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #ffbdbd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #ff9999;
+        }
+
+        .btn-secondary {
+            background: #666;
+        }
+
+        .btn-secondary:hover {
+            background: #555;
+        }
+
+        .btn-success {
+            background: #4caf50;
+        }
+
+        .btn-success:hover {
+            background: #45a049;
+        }
+
+        .output {
+            margin-top: 15px;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .status-success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+        }
+
+        .alert {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Verificar Dados do Sistema</h1>
+
+        <div class="alert alert-info">
+            <strong>ℹ️ Informação:</strong> Use esta página para verificar e corrigir problemas com os dados do LocalStorage.
+        </div>
+
+        <!-- Status Geral -->
+        <div class="section">
+            <h2>📊 Status Geral</h2>
+            <button class="btn" onclick="verificarStatus()">Verificar Status</button>
+            <div id="statusOutput"></div>
+        </div>
+
+        <!-- Produtos -->
+        <div class="section">
+            <h2>🛍️ Produtos</h2>
+            <button class="btn" onclick="mostrarProdutos()">Mostrar Produtos</button>
+            <button class="btn btn-success" onclick="inicializarProdutos()">Inicializar Produtos Padrão</button>
+            <button class="btn btn-secondary" onclick="limparProdutos()">Limpar Produtos</button>
+            <div id="produtosOutput"></div>
+        </div>
+
+        <!-- Pedidos -->
+        <div class="section">
+            <h2>📦 Pedidos</h2>
+            <button class="btn" onclick="mostrarPedidos()">Mostrar Pedidos</button>
+            <button class="btn btn-success" onclick="adicionarPedidoTeste()">Adicionar Pedido de Teste</button>
+            <button class="btn btn-secondary" onclick="limparPedidos()">Limpar Pedidos</button>
+            <div id="pedidosOutput"></div>
+        </div>
+
+        <!-- Ações Rápidas -->
+        <div class="section">
+            <h2>⚡ Ações Rápidas</h2>
+            <button class="btn btn-success" onclick="configurarSistema()">🔧 Configurar Sistema Completo</button>
+            <button class="btn" onclick="abrirAdmin()">🔐 Abrir Painel Admin</button>
+            <button class="btn" onclick="abrirSite()">🏠 Abrir Site</button>
+            <button class="btn btn-secondary" onclick="limparTudo()">⚠️ Limpar Tudo</button>
+        </div>
+    </div>
+
+    <script>
+        // Produtos padrão (copiados do script.js)
+        const produtosPadrao = [
+            {
+                id: 1,
+                name: "Perfume Floral Elegance Feminino",
+                category: "Cosmético Feminino",
+                subcategory: "Perfumes",
+                price: 189.90,
+                oldPrice: 249.90,
+                description: "Fragrância sofisticada e duradoura para momentos especiais",
+                image: null
+            },
+            {
+                id: 2,
+                name: "Perfume Floral Delicado",
+                category: "Cosmético Feminino",
+                subcategory: "Perfumes",
+                price: 129.90,
+                oldPrice: null,
+                description: "Aroma suave e romântico para o dia a dia",
+                image: null
+            },
+            {
+                id: 3,
+                name: "Creme Hidratante Facial Premium",
+                category: "Cosmético Feminino",
+                subcategory: "Cremes",
+                price: 89.90,
+                oldPrice: 109.90,
+                description: "Hidratação profunda e anti-idade para pele radiante",
+                image: null
+            },
+            {
+                id: 4,
+                name: "Perfume Intense Masculino",
+                category: "Cosmético Masculino",
+                subcategory: "Perfumes",
+                price: 199.90,
+                oldPrice: 259.90,
+                description: "Fragrância marcante e viril para homens modernos",
+                image: null
+            },
+            {
+                id: 5,
+                name: "Body Splash Fresh",
+                category: "Cosmético Feminino",
+                subcategory: "Body Splash",
+                price: 49.90,
+                oldPrice: null,
+                description: "Sensação refrescante para o dia a dia",
+                image: null
+            }
+        ];
+
+        function verificarStatus() {
+            const products = localStorage.getItem('products');
+            const adminProducts = localStorage.getItem('adminProducts');
+            const orders = localStorage.getItem('orders');
+            const cart = localStorage.getItem('cart');
+            const adminLoggedIn = localStorage.getItem('adminLoggedIn');
+
+            const productsCount = products ? JSON.parse(products).length : 0;
+            const ordersCount = orders ? JSON.parse(orders).length : 0;
+            const cartCount = cart ? JSON.parse(cart).length : 0;
+
+            const output = document.getElementById('statusOutput');
+            output.innerHTML = `
+                <div class="output">
+                    <h3>Status do LocalStorage:</h3>
+                    <p>
+                        <strong>Produtos (products):</strong> 
+                        <span class="status ${productsCount > 0 ? 'status-success' : 'status-error'}">
+                            ${productsCount} produtos
+                        </span>
+                    </p>
+                    <p>
+                        <strong>Produtos Admin (adminProducts):</strong> 
+                        <span class="status ${adminProducts ? 'status-success' : 'status-error'}">
+                            ${adminProducts ? 'Configurado' : 'Não configurado'}
+                        </span>
+                    </p>
+                    <p>
+                        <strong>Pedidos:</strong> 
+                        <span class="status ${ordersCount > 0 ? 'status-success' : 'status-warning'}">
+                            ${ordersCount} pedidos
+                        </span>
+                    </p>
+                    <p>
+                        <strong>Carrinho:</strong> 
+                        <span class="status status-success">
+                            ${cartCount} itens
+                        </span>
+                    </p>
+                    <p>
+                        <strong>Admin Logado:</strong> 
+                        <span class="status ${adminLoggedIn === 'true' ? 'status-success' : 'status-warning'}">
+                            ${adminLoggedIn === 'true' ? 'Sim' : 'Não'}
+                        </span>
+                    </p>
+                </div>
+            `;
+        }
+
+        function mostrarProdutos() {
+            const products = localStorage.getItem('products');
+            const output = document.getElementById('produtosOutput');
+            
+            if (!products) {
+                output.innerHTML = '<div class="output"><p style="color: red;">❌ Nenhum produto encontrado no localStorage!</p></div>';
+                return;
+            }
+
+            const productsArray = JSON.parse(products);
+            output.innerHTML = `
+                <div class="output">
+                    <h3>✅ ${productsArray.length} produtos encontrados:</h3>
+                    <pre>${JSON.stringify(productsArray, null, 2)}</pre>
+                </div>
+            `;
+        }
+
+        function inicializarProdutos() {
+            localStorage.setItem('products', JSON.stringify(produtosPadrao));
+            localStorage.setItem('adminProducts', JSON.stringify(produtosPadrao));
+            
+            const output = document.getElementById('produtosOutput');
+            output.innerHTML = `
+                <div class="output">
+                    <div class="alert alert-success">
+                        ✅ <strong>Sucesso!</strong> ${produtosPadrao.length} produtos padrão foram inicializados.
+                    </div>
+                    <p>Produtos cadastrados:</p>
+                    <ul>
+                        ${produtosPadrao.map(p => `<li>${p.name} - R$ ${p.price.toFixed(2)}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+
+        function limparProdutos() {
+            if (confirm('Tem certeza que deseja remover todos os produtos?')) {
+                localStorage.removeItem('products');
+                localStorage.removeItem('adminProducts');
+                document.getElementById('produtosOutput').innerHTML = '<div class="output"><p style="color: green;">✅ Produtos removidos!</p></div>';
+            }
+        }
+
+        function mostrarPedidos() {
+            const orders = localStorage.getItem('orders');
+            const output = document.getElementById('pedidosOutput');
+            
+            if (!orders) {
+                output.innerHTML = '<div class="output"><p style="color: orange;">⚠️ Nenhum pedido encontrado.</p></div>';
+                return;
+            }
+
+            const ordersArray = JSON.parse(orders);
+            output.innerHTML = `
+                <div class="output">
+                    <h3>✅ ${ordersArray.length} pedidos encontrados:</h3>
+                    <pre>${JSON.stringify(ordersArray, null, 2)}</pre>
+                </div>
+            `;
+        }
+
+        function adicionarPedidoTeste() {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            const now = new Date();
+            
+            const novoPedido = {
+                id: Date.now(),
+                date: now.toISOString(),
+                customer: {
+                    name: "Cliente Teste",
+                    phone: "(11) 98765-4321",
+                    email: "teste@example.com"
+                },
+                address: {
+                    street: "Rua Teste",
+                    number: "123",
+                    complement: "Apto 1",
+                    neighborhood: "Centro",
+                    city: "São Paulo"
+                },
+                items: [
+                    {
+                        id: 1,
+                        name: "Perfume Teste",
+                        price: 189.90,
+                        quantity: 2,
+                        category: "Cosmético Feminino"
+                    }
+                ],
+                total: 379.80
+            };
+
+            orders.push(novoPedido);
+            localStorage.setItem('orders', JSON.stringify(orders));
+
+            const output = document.getElementById('pedidosOutput');
+            output.innerHTML = `
+                <div class="output">
+                    <div class="alert alert-success">
+                        ✅ <strong>Pedido de teste adicionado!</strong><br>
+                        Total de pedidos: ${orders.length}
+                    </div>
+                </div>
+            `;
+        }
+
+        function limparPedidos() {
+            if (confirm('Tem certeza que deseja remover todos os pedidos?')) {
+                localStorage.removeItem('orders');
+                document.getElementById('pedidosOutput').innerHTML = '<div class="output"><p style="color: green;">✅ Pedidos removidos!</p></div>';
+            }
+        }
+
+        function configurarSistema() {
+            // Configurar produtos
+            localStorage.setItem('products', JSON.stringify(produtosPadrao));
+            localStorage.setItem('adminProducts', JSON.stringify(produtosPadrao));
+            
+            // Adicionar um pedido de exemplo
+            const pedidoExemplo = {
+                id: Date.now(),
+                date: new Date().toISOString(),
+                customer: {
+                    name: "Maria Silva",
+                    phone: "(11) 98765-4321"
+                },
+                address: {
+                    street: "Rua das Flores",
+                    number: "123",
+                    neighborhood: "Centro",
+                    city: "São Paulo",
+                    complement: ""
+                },
+                items: [
+                    {
+                        id: 1,
+                        name: "Perfume Floral Elegance Feminino",
+                        price: 189.90,
+                        quantity: 1,
+                        category: "Cosmético Feminino"
+                    }
+                ],
+                total: 189.90
+            };
+
+            const orders = [pedidoExemplo];
+            localStorage.setItem('orders', JSON.stringify(orders));
+
+            // Limpar carrinho
+            localStorage.removeItem('cart');
+
+            alert('✅ Sistema configurado com sucesso!\n\n' +
+                  `- ${produtosPadrao.length} produtos cadastrados\n` +
+                  '- 1 pedido de exemplo\n' +
+                  '- Carrinho limpo\n\n' +
+                  'Agora você pode acessar o painel admin!');
+
+            verificarStatus();
+        }
+
+        function abrirAdmin() {
+            window.open('admin.html', '_blank');
+        }
+
+        function abrirSite() {
+            window.open('index.html', '_blank');
+        }
+
+        function limparTudo() {
+            if (confirm('⚠️ ATENÇÃO: Isso vai remover TODOS os dados. Confirmar?')) {
+                localStorage.clear();
+                alert('✅ Todos os dados foram removidos!');
+                location.reload();
+            }
+        }
+
+        // Verificar status automaticamente ao carregar
+        window.addEventListener('DOMContentLoaded', verificarStatus);
+    </script>
+</body>
+</html>
+

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Loja virtual de presentes especiais - Perfumes, chocolates, Tupperware e muito mais - PROJETO DE PORTFÓLIO">
     <title>Presentes Especiais - Carinho em cada detalhe | PROJETO PORTFÓLIO</title>
+    <link rel="icon" type="image/png" href="img/Logoroofc (1).png">
+    <script src="js/favicon-generator.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,12 +80,54 @@
                     <h2 class="hero-title">Presentes que Encantam e Transmitem Carinho</h2>
                     <p class="hero-subtitle">Descubra a seleção perfeita de perfumes, chocolates e presentes especiais para cada momento</p>
                     <div class="hero-buttons">
-                        <a href="#produtos" class="btn btn-primary">Ver Produtos</a>
+                        <a href="pages/produtos.html" class="btn btn-primary">Ver Produtos</a>
                         <a href="#categorias" class="btn btn-secondary">Explorar Categorias</a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <img src="img/logomadinha.png" alt="Presentes Especiais" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Carousel Section -->
+    <section class="brands-carousel-section">
+        <div class="container">
+            <h3 class="brands-title">Trabalhamos com as melhores marcas</h3>
+            <div class="brands-carousel-wrapper">
+                <div class="brands-carousel">
+                    <div class="brand-item">
+                        <img src="img/Nturalogo-removebg-preview.png" alt="Natura" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="img/avon.png" alt="Avon" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="img/oboticario-removebg-preview.png" alt="O Boticário" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="img/Tapperware.png" alt="Tupperware" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="img/cacaushow.png" alt="Cacau Show" class="brand-logo">
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="brand-item">
+                        <img src="img/Nturalogo-removebg-preview.png" alt="Natura" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="img/avon.png" alt="Avon" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="img/oboticario-removebg-preview.png" alt="O Boticário" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="img/Tapperware.png" alt="Tupperware" class="brand-logo">
+                    </div>
+                    <div class="brand-item">
+                        <img src="img/cacaushow.png" alt="Cacau Show" class="brand-logo">
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,6 +173,18 @@
                     <p class="category-description">Combinações perfeitas para presentear</p>
                     <button class="category-link" onclick="window.location.href='pages/produtos.html'; return false;" style="cursor:pointer;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'"({behavior:'smooth'})">Ver mais</button>
                 </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3 class="category-title">Chocolates</h3>
+                    <p class="category-description">Delícias doces para todos os momentos</p>
+                    <button class="category-link" onclick="window.location.href='pages/chocolates.html'; return false;" style="cursor:pointer;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'"({behavior:'smooth'})">Ver mais</button>
+                </div>
             </div>
         </div>
     </section>
@@ -153,61 +209,6 @@
                 <h2 class="banner-title">Ofertas Especiais</h2>
                 <p class="banner-text">Aproveite descontos exclusivos em produtos selecionados</p>
                 <button class="btn btn-primary" onclick="window.location.href='pages/ofertas.html'">Conferir Ofertas</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact/Portfolio Section -->
-    <section class="contact-portfolio-section" id="contato">
-        <div class="container">
-            <div class="portfolio-info-box">
-                <h2>Interessado em um Site Completo?</h2>
-                <p>Este é um projeto demonstrativo para portfólio. Se você deseja um e-commerce completo e funcional com todas as features, entre em contato!</p>
-                
-                <div class="features-list">
-                    <div class="feature-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2">
-                            <path d="M20 6 9 17l-5-5"></path>
-                        </svg>
-                        <span>Sistema de pagamento integrado (Mercado Pago, PagSeguro, Stripe)</span>
-                    </div>
-                    <div class="feature-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2">
-                            <path d="M20 6 9 17l-5-5"></path>
-                        </svg>
-                        <span>Painel administrativo completo</span>
-                    </div>
-                    <div class="feature-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2">
-                            <path d="M20 6 9 17l-5-5"></path>
-                        </svg>
-                        <span>Banco de dados e gestão de pedidos</span>
-                    </div>
-                    <div class="feature-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2">
-                            <path d="M20 6 9 17l-5-5"></path>
-                        </svg>
-                        <span>Sistema de autenticação e segurança</span>
-                    </div>
-                    <div class="feature-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2">
-                            <path d="M20 6 9 17l-5-5"></path>
-                        </svg>
-                        <span>Integração com APIs de frete</span>
-                    </div>
-                    <div class="feature-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2">
-                            <path d="M20 6 9 17l-5-5"></path>
-                        </svg>
-                        <span>Notificações por e-mail e WhatsApp</span>
-                    </div>
-                </div>
-
-                <div class="cta-buttons">
-                    <p><strong>Entre em contato:</strong></p>
-                    <p style="margin-top: 16px;">📧 gustavo.hernique.m2005@gmail.com</p>
-                    <p>📱 (11) 94359-3778</p>
-                </div>
             </div>
         </div>
     </section>

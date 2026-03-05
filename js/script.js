@@ -7,254 +7,93 @@ const defaultProducts = [
     // Cosmético Feminino - Perfumes
     {
         id: 1,
-        name: "Perfume Floral Elegance Feminino",
+        name: "Cuide-se Bem Nuvem Body Splash",
         category: "Cosmético Feminino",
-        subcategory: "Perfumes",
-        price: 189.90,
-        oldPrice: 249.90,
-        description: "Fragrância sofisticada e duradoura para momentos especiais",
-        image: null
+        subcategory: "Body Splash",
+        price: 49.90,
+        oldPrice: 59.90,
+        description: "Fragrância suave e delicada como uma nuvem",
+        image: "img/cuidesebem nuvem 2.jpg",
+        featured: true
     },
     {
         id: 2,
-        name: "Perfume Floral Delicado",
+        name: "Cuide-se Bem Pêssego Body Splash",
+        category: "Cosmético Feminino",
+        subcategory: "Body Splash",
+        price: 49.90,
+        oldPrice: null,
+        description: "Aroma doce e refrescante de pêssego",
+        image: "img/cuidesebem pesego.jpg"
+    },
+    {
+        id: 3,
+        name: "Liz Flora Desodorante Colônia",
         category: "Cosmético Feminino",
         subcategory: "Perfumes",
         price: 129.90,
-        oldPrice: null,
-        description: "Aroma suave e romântico para o dia a dia",
-        image: null
+        oldPrice: 149.90,
+        description: "Aroma floral delicado e romântico",
+        image: "img/lis1.jpg"
     },
-    // Cosmético Feminino - Cremes
-    {
-        id: 3,
-        name: "Creme Hidratante Facial Premium",
-        category: "Cosmético Feminino",
-        subcategory: "Cremes",
-        price: 89.90,
-        oldPrice: 109.90,
-        description: "Hidratação profunda e anti-idade para pele radiante",
-        image: null
-    },
+
+    // Cosmético Masculino - Perfumes
     {
         id: 4,
-        name: "Creme Corporal Nutritivo",
+        name: "Zaad Desodorante Colônia",
+        category: "Cosmético Masculino",
+        subcategory: "Perfumes",
+        price: 139.90,
+        oldPrice: 169.90,
+        description: "Fragrância masculina sofisticada e marcante",
+        image: "img/zaad1.jpg",
+        featured: true
+    },
+
+    // Cosmético Feminino - Cremes
+    {
+        id: 8,
+        name: "Creme Hidratante Corporal Nuvem",
         category: "Cosmético Feminino",
         subcategory: "Cremes",
-        price: 69.90,
-        oldPrice: null,
-        description: "Nutrição intensa com fragrância suave",
-        image: null
-    },
-    // Cosmético Feminino - Sabonetes
-    {
-        id: 5,
-        name: "Sabonete Líquido Floral",
-        category: "Cosmético Feminino",
-        subcategory: "Sabonetes",
         price: 39.90,
         oldPrice: 49.90,
-        description: "Limpeza suave com essências florais",
-        image: null
+        description: "Hidratação profunda com fragrância suave",
+        image: "img/cuidesebem nuvem.jpg"
+    },
+
+    // Chocolates - Ovos de Páscoa
+    {
+        id: 5,
+        name: "Ovo de Páscoa Harry Potter",
+        category: "Chocolates",
+        subcategory: "Ovos de Páscoa",
+        price: 89.90,
+        oldPrice: 109.90,
+        description: "Delicioso ovo de páscoa temático Harry Potter",
+        image: "img/HERRYPOTTEROVO.png",
+        featured: true
     },
     {
         id: 6,
-        name: "Kit Sabonetes Artesanais",
-        category: "Cosmético Feminino",
-        subcategory: "Sabonetes",
-        price: 59.90,
+        name: "Ovo de Páscoa Scooby-Doo",
+        category: "Chocolates",
+        subcategory: "Ovos de Páscoa",
+        price: 79.90,
         oldPrice: null,
-        description: "3 sabonetes artesanais com aromas exclusivos",
-        image: null
+        description: "Ovo de páscoa do querido Scooby-Doo",
+        image: "img/scoobydoovo.webp",
+        featured: true
     },
-    // Cosmético Feminino - Body Splash
     {
         id: 7,
-        name: "Body Splash Floral Fresh",
-        category: "Cosmético Feminino",
-        subcategory: "Body Splash",
-        price: 49.90,
-        oldPrice: 59.90,
-        description: "Fragrância leve e refrescante para o dia a dia",
-        image: null
-    },
-    {
-        id: 8,
-        name: "Body Splash Romance",
-        category: "Cosmético Feminino",
-        subcategory: "Body Splash",
-        price: 54.90,
-        oldPrice: null,
-        description: "Aroma envolvente e duradouro",
-        image: null
-    },
-    // Cosmético Feminino - Esfoliantes
-    {
-        id: 9,
-        name: "Esfoliante Facial Revitalizante",
-        category: "Cosmético Feminino",
-        subcategory: "Esfoliantes",
-        price: 79.90,
-        oldPrice: null,
-        description: "Renovação celular e pele mais luminosa",
-        image: null
-    },
-    {
-        id: 10,
-        name: "Esfoliante Corporal Nutritivo",
-        category: "Cosmético Feminino",
-        subcategory: "Esfoliantes",
-        price: 69.90,
-        oldPrice: 89.90,
-        description: "Remove impurezas e nutre a pele",
-        image: null
-    },
-    // Cosmético Feminino - Outros Cuidados
-    {
-        id: 11,
-        name: "Máscara Facial Hidratante",
-        category: "Cosmético Feminino",
-        subcategory: "Outros Cuidados",
-        price: 45.90,
-        oldPrice: null,
-        description: "Hidratação intensiva em 15 minutos",
-        image: null
-    },
-    {
-        id: 12,
-        name: "Sérum Anti-idade",
-        category: "Cosmético Feminino",
-        subcategory: "Outros Cuidados",
-        price: 149.90,
-        oldPrice: 199.90,
-        description: "Tratamento intensivo contra sinais do tempo",
-        image: null
-    },
-    // Cosmético Masculino - Perfumes
-    {
-        id: 13,
-        name: "Perfume Amadeirado Masculino",
-        category: "Cosmético Masculino",
-        subcategory: "Perfumes",
-        price: 179.90,
-        oldPrice: 229.90,
-        description: "Fragrância marcante e sofisticada",
-        image: null
-    },
-    {
-        id: 14,
-        name: "Perfume Fresh Masculino",
-        category: "Cosmético Masculino",
-        subcategory: "Perfumes",
-        price: 139.90,
-        oldPrice: null,
-        description: "Aroma fresco e envolvente para o dia a dia",
-        image: null
-    },
-    // Cosmético Masculino - Cremes
-    {
-        id: 15,
-        name: "Creme Facial Hidratante Masculino",
-        category: "Cosmético Masculino",
-        subcategory: "Cremes",
-        price: 79.90,
+        name: "Ovo de Páscoa Luffy",
+        category: "Chocolates",
+        subcategory: "Ovos de Páscoa",
+        price: 84.90,
         oldPrice: 99.90,
-        description: "Hidratação sem deixar oleosidade",
-        image: null
-    },
-    {
-        id: 16,
-        name: "Creme Pós-Barba Revitalizante",
-        category: "Cosmético Masculino",
-        subcategory: "Cremes",
-        price: 59.90,
-        oldPrice: null,
-        description: "Acalma e hidrata após o barbear",
-        image: null
-    },
-    // Cosmético Masculino - Sabonetes
-    {
-        id: 17,
-        name: "Sabonete Líquido Masculino Fresh",
-        category: "Cosmético Masculino",
-        subcategory: "Sabonetes",
-        price: 42.90,
-        oldPrice: null,
-        description: "Limpeza profunda com fragrância masculina",
-        image: null
-    },
-    {
-        id: 18,
-        name: "Kit Sabonetes em Barra Masculino",
-        category: "Cosmético Masculino",
-        subcategory: "Sabonetes",
-        price: 54.90,
-        oldPrice: 69.90,
-        description: "3 sabonetes com diferentes fragrâncias",
-        image: null
-    },
-    // Cosmético Masculino - Body Splash
-    {
-        id: 19,
-        name: "Body Splash Sport Masculino",
-        category: "Cosmético Masculino",
-        subcategory: "Body Splash",
-        price: 52.90,
-        oldPrice: null,
-        description: "Fragrância energizante e refrescante",
-        image: null
-    },
-    {
-        id: 20,
-        name: "Body Splash Classic Masculino",
-        category: "Cosmético Masculino",
-        subcategory: "Body Splash",
-        price: 49.90,
-        oldPrice: 59.90,
-        description: "Aroma clássico e duradouro",
-        image: null
-    },
-    // Cosmético Masculino - Esfoliantes
-    {
-        id: 21,
-        name: "Esfoliante Facial Masculino",
-        category: "Cosmético Masculino",
-        subcategory: "Esfoliantes",
-        price: 69.90,
-        oldPrice: null,
-        description: "Remove impurezas e prepara para o barbear",
-        image: null
-    },
-    {
-        id: 22,
-        name: "Esfoliante Corporal Masculino",
-        category: "Cosmético Masculino",
-        subcategory: "Esfoliantes",
-        price: 74.90,
-        oldPrice: 89.90,
-        description: "Limpeza profunda e revitalizante",
-        image: null
-    },
-    // Cosmético Masculino - Outros Cuidados
-    {
-        id: 23,
-        name: "Gel de Barbear Premium",
-        category: "Cosmético Masculino",
-        subcategory: "Outros Cuidados",
-        price: 39.90,
-        oldPrice: null,
-        description: "Barbear suave e confortável",
-        image: null
-    },
-    {
-        id: 24,
-        name: "Sérum Anti-idade Masculino",
-        category: "Cosmético Masculino",
-        subcategory: "Outros Cuidados",
-        price: 139.90,
-        oldPrice: 179.90,
-        description: "Combate rugas e sinais de cansaço",
-        image: null
+        description: "Ovo de Páscoa do Luffy de One Piece",
+        image: "img/lUFFY.png"
     }
 ];
 
@@ -268,7 +107,7 @@ const API_URL = (() => {
   // Fallback: detectar ambiente automaticamente
   if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
     // Em produção - SUBSTITUA pela URL real do seu backend no Render
-    return 'https://SEU-BACKEND.onrender.com/api/products';
+    return 'https://lojaoficial-3.onrender.com/api/products'; // domínio correto do backend
   }
   
   // Em desenvolvimento local
@@ -280,59 +119,52 @@ console.log('🔗 API URL configurada:', API_URL);
 // Expor no escopo global para outros scripts
 window.API_URL = API_URL;
 
-console.log('=== SCRIPT.JS INICIADO ===');
-console.log('defaultProducts disponíveis:', defaultProducts.length);
-
 // Load products from API or use default
-let products = defaultProducts; // Inicializar com produtos padrão
-window.products = products; // Expor globalmente
+let products = [...defaultProducts]; // Inicializa com produtos padrão
 
-console.log('Products inicializados:', products.length);
-console.log('window.products definido:', typeof window.products, window.products.length);
-
-// Load products from API
+// Carregar produtos da API
 async function loadProductsFromAPI() {
-    console.log('Tentando carregar produtos da API...');
     try {
         const response = await fetch(API_URL);
         if (response.ok) {
-            products = await response.json();
-            window.products = products; // Atualizar globalmente
+            const data = await response.json();
+            
+            // A API retorna { products: [], pagination: {} } ou array direto (compatibilidade)
+            if (data.products && Array.isArray(data.products)) {
+                products = data.products;
+            } else if (Array.isArray(data)) {
+                products = data;
+            } else {
+                console.error('Formato de resposta inesperado:', data);
+                products = [...defaultProducts]; // Fallback para produtos padrão
+            }
+            
             console.log('✅ Produtos carregados da API:', products.length);
-            // Não usar defaultProducts, sempre usar o que vem da API
+            
+            // Disparar evento customizado quando produtos são carregados
+            window.dispatchEvent(new CustomEvent('productsLoaded', { detail: { products } }));
         } else {
-            console.error('Erro ao carregar produtos da API');
-            // Só usar defaultProducts se houver erro real
-            products = defaultProducts;
-            window.products = products; // Atualizar globalmente
-            console.log('⚠️ Usando defaultProducts:', products.length);
+            console.error('Erro ao carregar produtos da API, usando produtos padrão');
+            products = [...defaultProducts]; // Fallback para produtos padrão
         }
     } catch (error) {
-        console.error('Erro ao conectar com API:', error);
-        // Só usar defaultProducts se não conseguir conectar
-        products = defaultProducts;
-        window.products = products; // Atualizar globalmente
-        console.log('⚠️ Usando defaultProducts (erro de conexão):', products.length);
+        console.error('Erro ao conectar com API, usando produtos padrão:', error);
+        products = [...defaultProducts]; // Fallback para produtos padrão
     }
-    
-    // Atualizar displays se as funções existirem
     if (typeof renderProducts === 'function') {
         renderProducts();
     }
     if (typeof loadFeaturedProducts === 'function') {
         loadFeaturedProducts();
     }
-    
-    // Atualizar displays de produtos
     displayFeaturedProducts();
     displayAllProducts();
 }
 
-// Carregar produtos ao iniciar
-loadProductsFromAPI();
-
-// Sincronizar a cada 5 segundos para manter atualizado
-setInterval(loadProductsFromAPI, 5000);
+// Carregar produtos ao iniciar (opcional - apenas se API estiver disponível)
+// loadProductsFromAPI();
+// Comentado para evitar requisições desnecessárias quando API não está disponível
+// setInterval(loadProductsFromAPI, 5000);
 
 // ===================================
 // CART MANAGEMENT
@@ -350,56 +182,70 @@ function updateCartCount() {
 
 // Helper function to get correct path for produto.html
 function getProductPath(productId) {
-    // Se estamos no index.html (raiz), usar caminho com frontend/pages/
+    // Se estamos no index.html (raiz), usar caminho pages/produto.html
     if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
-        return `frontend/pages/produto.html?id=${productId}`;
+        return `pages/produto.html?id=${productId}`;
     }
-    // Se estamos em uma página dentro de frontend/pages/, usar caminho relativo
+    // Se estamos em uma página dentro de pages/, usar caminho relativo
     return `produto.html?id=${productId}`;
 }
 
+// Helper function to get correct image path
+function getImagePath(imagePath) {
+    // Se já tem ../ no caminho, retornar como está
+    if (imagePath.startsWith('../')) {
+        return imagePath;
+    }
+    // Se estamos no index.html (raiz), usar caminho direto
+    if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
+        return imagePath;
+    }
+    // Se estamos em uma página dentro de pages/, adicionar ../
+    return `../${imagePath}`;
+}
+
 function addToCart(productId) {
-    console.log('addToCart chamado com ID:', productId);
-    console.log('Produtos disponíveis:', products);
-    
     // Converter para string para compatibilidade
     const productIdStr = String(productId);
     const product = products.find(p => String(p.id) === productIdStr);
     
     if (!product) {
-        console.error('Produto não encontrado:', productId);
         showNotification('Erro: Produto não encontrado!');
         return;
     }
-
-    console.log('Produto encontrado:', product);
 
     const existingItem = cart.find(item => String(item.id) === productIdStr);
     
     if (existingItem) {
         existingItem.quantity += 1;
-        console.log('Quantidade atualizada:', existingItem);
     } else {
         cart.push({
             ...product,
             quantity: 1
         });
-        console.log('Produto adicionado ao carrinho');
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
     updateCartModal();
     showNotification('Produto adicionado ao carrinho!');
-    console.log('Carrinho atualizado:', cart);
 }
 
 function removeFromCart(productId) {
     const productIdStr = String(productId);
+    const itemRemovido = cart.find(item => String(item.id) === productIdStr);
+    
     cart = cart.filter(item => String(item.id) !== productIdStr);
     localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Atualizar todas as visualizações
     updateCartCount();
     updateCartModal();
+    
+    // Mostrar notificação
+    if (itemRemovido) {
+        showNotification(`${itemRemovido.name} removido do carrinho`);
+    }
 }
 
 function updateQuantity(productId, change) {
@@ -415,6 +261,16 @@ function updateQuantity(productId, change) {
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartModal();
         updateCartCount();
+    }
+    
+    // Feedback visual imediato
+    const itemElement = document.querySelector(`[data-product-id="${productIdStr}"]`);
+    if (itemElement) {
+        itemElement.style.transition = 'all 0.2s ease';
+        itemElement.style.transform = 'scale(0.98)';
+        setTimeout(() => {
+            itemElement.style.transform = 'scale(1)';
+        }, 200);
     }
 }
 
@@ -443,7 +299,7 @@ function updateCartModal() {
         <div class="cart-item">
             <div class="cart-item-image">
                 ${item.image 
-                    ? `<img src="${item.image}" alt="${item.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    ? `<img src="${getImagePath(item.image)}" alt="${item.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5" style="display: none;">
                            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
                            <circle cx="12" cy="12" r="3"></circle>
@@ -483,12 +339,12 @@ function displayFeaturedProducts() {
     const productsContainer = document.getElementById('featuredProducts');
     if (!productsContainer) return;
 
-    // Filtrar produtos em destaque primeiro, se não houver nenhum, mostrar os 6 primeiros
+    // Filtrar produtos em destaque primeiro, se não houver nenhum, mostrar os 5 primeiros
     let featuredProducts = products.filter(p => p.featured === true);
     if (featuredProducts.length === 0) {
-        featuredProducts = products.slice(0, 6);
-    } else if (featuredProducts.length > 6) {
-        featuredProducts = featuredProducts.slice(0, 6);
+        featuredProducts = products.slice(0, 5);
+    } else if (featuredProducts.length > 5) {
+        featuredProducts = featuredProducts.slice(0, 5);
     }
 
     productsContainer.innerHTML = featuredProducts.map(product => `
@@ -496,7 +352,7 @@ function displayFeaturedProducts() {
             <a href="${getProductPath(product.id)}" class="product-card-link">
                 <div class="product-image">
                     ${product.image 
-                        ? `<img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        ? `<img src="${getImagePath(product.image)}" alt="${product.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                            <div class="product-placeholder" style="display: none;">
                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5">
                                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
@@ -546,7 +402,7 @@ function displayAllProducts() {
             <a href="${getProductPath(product.id)}" class="product-card-link">
                 <div class="product-image">
                     ${product.image 
-                        ? `<img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        ? `<img src="${getImagePath(product.image)}" alt="${product.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                            <div class="product-placeholder" style="display: none;">
                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5">
                                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
@@ -638,8 +494,8 @@ function setupCartModal() {
                 alert('Seu carrinho está vazio!');
                 return;
             }
-            // Abrir modal de demonstração
-            openDemoCheckoutModal();
+            // Redirecionar para página de checkout
+            window.location.href = 'checkout.html';
         });
     }
 }
@@ -685,7 +541,7 @@ function setupSearch() {
         searchResults.innerHTML = filteredProducts.map(product => `
             <div class="search-result-item" onclick="window.location.href='${getProductPath(product.id)}'">
                 ${product.image 
-                    ? `<img src="${product.image}" alt="${product.name}" class="search-result-image">`
+                    ? `<img src="${getImagePath(product.image)}" alt="${product.name}" class="search-result-image">`
                     : `<div class="search-result-image">
                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5">
                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
@@ -844,7 +700,7 @@ function filterProductsByCategory(category) {
             <a href="produto.html?id=${product.id}" class="product-card-link">
                 <div class="product-image">
                     ${product.image 
-                        ? `<img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        ? `<img src="${getImagePath(product.image)}" alt="${product.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                            <div class="product-placeholder" style="display: none;">
                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5">
                                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
@@ -898,7 +754,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setActiveLink();
     setupSmoothScroll();
     
-    // Display products will be called after API loads in loadProductsFromAPI()
+    // Display featured products on index page
+    displayFeaturedProducts();
     
     // Setup event delegation for add to cart buttons
     document.addEventListener('click', (e) => {
@@ -918,8 +775,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return false;
         }
     }, true); // Use capture phase
-    
-    console.log('Site carregado com sucesso!');
 });
 
 // Export functions for use in HTML onclick attributes
@@ -928,88 +783,201 @@ window.removeFromCart = removeFromCart;
 window.updateQuantity = updateQuantity;
 window.filterProductsByCategory = filterProductsByCategory;
 window.getProductPath = getProductPath;
+window.getImagePath = getImagePath;
 window.formatPrice = formatPrice;
-window.openDemoCheckoutModal = openDemoCheckoutModal;
-window.closeDemoCheckoutModal = closeDemoCheckoutModal;
-window.enviarPedidoWhatsApp = enviarPedidoWhatsApp;
+// ===================================
+// HIERARCHICAL FILTER SYSTEM
+// ===================================
 
-// ========== PORTFOLIO SPECIFIC FUNCTIONS ==========
+// Define subcategories for each main category
+const categorySubcategories = {
+    'Cosmético Feminino': ['Perfumes', 'Cremes', 'Sabonetes', 'Body Splash', 'Esfoliantes', 'Outros Cuidados'],
+    'Cosmético Masculino': ['Perfumes', 'Cremes', 'Sabonetes', 'Body Splash', 'Esfoliantes', 'Outros Cuidados'],
+    'Chocolates': ['Chocolate ao Leite', 'Chocolate Meio Amargo', 'Chocolate Branco', 'Trufas', 'Bombons', 'Kits Presente', 'Outros Chocolates']
+};
 
-// Open Demo Checkout Modal
-function openDemoCheckoutModal() {
-    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+let currentMainCategory = 'todos';
+let currentSubcategory = null;
+
+// Filter by main category
+function filterByMainCategory(category) {
+    currentMainCategory = category;
+    currentSubcategory = null;
     
-    if (cartItems.length === 0) {
-        alert('Seu carrinho est� vazio! Adicione produtos antes de finalizar a compra.');
+    // Update active button
+    document.querySelectorAll('.main-filters .filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.category === category) {
+            btn.classList.add('active');
+        }
+    });
+    
+    // Show/hide sub-filters
+    const subFilters = document.getElementById('subFilters');
+    const subFilterButtons = document.getElementById('subFilterButtons');
+    
+    if (category === 'todos') {
+        subFilters.style.display = 'none';
+        loadAllProducts();
+    } else {
+        // Show sub-filters
+        subFilters.style.display = 'block';
+        
+        // Populate sub-filter buttons
+        const subcategories = categorySubcategories[category] || [];
+        subFilterButtons.innerHTML = `
+            <button class="filter-btn active" onclick="filterBySubcategory(null)">Todos</button>
+            ${subcategories.map(sub => `
+                <button class="filter-btn" onclick="filterBySubcategory('${sub}')">${sub}</button>
+            `).join('')}
+        `;
+        
+        // Load products from this category
+        loadProductsByMainCategory(category);
+    }
+}
+
+// Filter by subcategory
+function filterBySubcategory(subcategory) {
+    currentSubcategory = subcategory;
+    
+    // Update active button
+    document.querySelectorAll('.sub-filters .filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    event.target.classList.add('active');
+    
+    // Filter products
+    if (subcategory) {
+        loadProductsBySubcategory(currentMainCategory, subcategory);
+    } else {
+        loadProductsByMainCategory(currentMainCategory);
+    }
+}
+
+// Get all products
+function getAllProducts() {
+    // Se products estiver vazio, retorna defaultProducts
+    return products.length > 0 ? products : defaultProducts;
+}
+
+// Load products by category (alias para compatibilidade)
+function loadProductsByCategory(category) {
+    loadProductsByMainCategory(category);
+}
+
+// Load products by main category
+function loadProductsByMainCategory(category) {
+    const products = getAllProducts().filter(p => p.category === category);
+    displayFilteredProducts(products);
+}
+
+// Load products by subcategory
+function loadProductsBySubcategory(mainCategory, subcategory) {
+    const products = getAllProducts().filter(p => 
+        p.category === mainCategory && p.subcategory === subcategory
+    );
+    displayFilteredProducts(products);
+}
+
+// Display filtered products
+function displayFilteredProducts(products) {
+    const container = document.getElementById('allProducts');
+    if (!container) return;
+    
+    if (products.length === 0) {
+        container.innerHTML = '<p class="empty-message">Nenhum produto encontrado nesta categoria</p>';
         return;
     }
     
-    const demoModal = document.getElementById('demoCheckoutModal');
-    if (demoModal) {
-        demoModal.classList.add('active');
+    container.innerHTML = products.map(product => `
+        <div class="product-card">
+            <a href="${getProductPath('produto.html')}?id=${product.id}" class="product-card-link">
+                ${product.image ? 
+                    `<img src="${getImagePath(product.image)}" alt="${product.name}" class="product-img">` :
+                    `<div class="product-img-placeholder">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#ffbdbd" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>`
+                }
+                <div class="product-info">
+                    <h3 class="product-title">${product.name}</h3>
+                    <p class="product-description">${product.description}</p>
+                    <div class="product-footer">
+                        <div class="product-pricing">
+                            <span class="product-price">${formatPrice(product.price)}</span>
+                            ${product.oldPrice ? `<span class="product-old-price">${formatPrice(product.oldPrice)}</span>` : ''}
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart('${product.id}')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                Adicionar ao Carrinho
+            </button>
+        </div>
+    `).join('');
+}
+
+// Load all products (when "todos" is selected)
+function loadAllProducts() {
+    const products = getAllProducts();
+    displayFilteredProducts(products);
+}
+
+// Export new functions
+window.getAllProducts = getAllProducts;
+window.loadProductsByCategory = loadProductsByCategory;
+window.filterByMainCategory = filterByMainCategory;
+window.filterBySubcategory = filterBySubcategory;
+window.loadProductsByMainCategory = loadProductsByMainCategory;
+window.loadAllProducts = loadAllProducts;
+// ===================================
+// DEMO CHECKOUT MODAL
+// ===================================
+
+function openDemoCheckoutModal() {
+    const modal = document.getElementById('demoCheckoutModal');
+    if (modal) {
+        modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
 }
 
-// Close Demo Checkout Modal
 function closeDemoCheckoutModal() {
-    const demoModal = document.getElementById('demoCheckoutModal');
-    if (demoModal) {
-        demoModal.classList.remove('active');
-        document.body.style.overflow = '';
+    const modal = document.getElementById('demoCheckoutModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
     }
 }
 
-// Enviar pedido via WhatsApp
 function enviarPedidoWhatsApp() {
-    // Mensagem para contratar o serviço de desenvolvimento
-    let mensagem = '👋 Olá!\n\n';
-    mensagem += '🌟 Vi seu portfólio de e-commerce "Presentes Especiais" e fiquei muito interessado!\n\n';
-    mensagem += '💼 Gostaria de saber mais informações sobre:\n';
-    mensagem += '• Desenvolvimento de um e-commerce completo\n';
-    mensagem += '• Valores e formas de pagamento\n';
-    mensagem += '• Prazo de desenvolvimento\n';
-    mensagem += '• Funcionalidades incluídas\n\n';
-    mensagem += '📱 Podemos conversar sobre um projeto?';
-    
-    // Número do WhatsApp (formato internacional sem + e sem espaços)
-    const numeroWhatsApp = '5511943593778';
-    
-    // Codificar mensagem para URL
-    const mensagemCodificada = encodeURIComponent(mensagem);
-    
-    // Abrir WhatsApp
-    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
+    const numeroWhatsApp = '5511943593778'; // N�mero com c�digo do pa�s e DDD
+    const mensagem = encodeURIComponent(
+        ' Ol�! Vi seu portf�lio de e-commerce e estou interessado(a) em saber mais sobre o desenvolvimento de uma loja online completa. Poderia me passar mais informa��es sobre os servi�os oferecidos?'
+    );
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
     window.open(urlWhatsApp, '_blank');
-    
-    // Fechar modal
-    closeDemoCheckoutModal();
 }
 
-// Close modal when clicking outside
-window.addEventListener('click', (e) => {
-    const demoModal = document.getElementById('demoCheckoutModal');
-    if (e.target === demoModal) {
+// Exportar fun��es globalmente
+window.openDemoCheckoutModal = openDemoCheckoutModal;
+window.closeDemoCheckoutModal = closeDemoCheckoutModal;
+window.enviarPedidoWhatsApp = enviarPedidoWhatsApp;
+
+// Fechar modal ao clicar fora
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('demoCheckoutModal');
+    if (modal && e.target === modal) {
         closeDemoCheckoutModal();
     }
 });
-
-// ESC key to close modal
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        closeDemoCheckoutModal();
-    }
-});
-
-// ========== UPDATE PRODUCT LINKS FOR PORTFOLIO ==========
-
-// Override getProductPath function for portfolio structure
-function getProductPath(productId) {
-    // Para o portf�lio, sempre usar pages/produto.html
-    if (window.location.pathname.includes('/pages/')) {
-        // Se j� estamos em uma p�gina dentro de pages/, usar caminho relativo
-        return `produto.html?id=${productId}`;
-    }
-    // Se estamos no index.html, usar caminho com pages/
-    return `pages/produto.html?id=${productId}`;
-}

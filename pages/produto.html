@@ -1,10 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detalhes do produto - PROJETO PORTFÓLIO">
-    <title>Produto - Presentes Especiais | PROJETO PORTFÓLIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Detalhes do produto">
+    <script src="../js/config.js"></script>
+    <title>Produto - Presentes Especiais</title>
+    <link rel="icon" type="image/png" href="../img/Logoroofc (1).png">
+    <script src="../js/favicon-generator.js"></script>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +28,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="../index.html">
-                        <img src="../img/Logoroofc (1).png" alt="Logo Presentes Especiais" class="header-logo">
-                    </a>
+                    <img src="../img/Logoroofc (1).png" alt="Logo Presentes Especiais" class="header-logo">
                 </div>
                 
                 <nav class="nav-menu" id="navMenu">
@@ -76,7 +77,7 @@
             <div class="breadcrumb">
                 <a href="../index.html">Início</a>
                 <span>›</span>
-                <a href="../index.html#produtos">Produtos</a>
+                <a href="produtos.html">Produtos</a>
                 <span>›</span>
                 <span id="breadcrumbProduct">Produto</span>
             </div>
@@ -102,7 +103,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 class="footer-title">Presentes Especiais</h3>
-                    <p class="footer-text">Projeto demonstrativo de e-commerce desenvolvido para portfólio. Transformando momentos em memórias inesquecíveis através de presentes cuidadosamente selecionados.</p>
+                    <p class="footer-text">Transformando momentos em memórias inesquecíveis através de presentes cuidadosamente selecionados.</p>
                 </div>
 
                 <div class="footer-section">
@@ -117,28 +118,27 @@
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle">Sobre Este Projeto</h4>
+                    <h4 class="footer-subtitle">Atendimento</h4>
                     <ul class="footer-links">
-                        <li>✅ Interface moderna e responsiva</li>
-                        <li>✅ Experiência de usuário otimizada</li>
-                        <li>✅ Código limpo e organizado</li>
-                        <li>✅ Pronto para customização</li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Trocas e Devoluções</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4 class="footer-subtitle">Informações</h4>
-                    <p><strong>⚠️ IMPORTANTE:</strong></p>
-                    <p style="font-size: 0.9rem; line-height: 1.8;">
-                        Este é um projeto de demonstração para portfólio. 
-                        Nenhuma transação financeira real será processada. 
-                        Para um e-commerce funcional completo, entre em contato.
-                    </p>
+                    <h4 class="footer-subtitle">Contato</h4>
+                    <ul class="footer-contact">
+                        <li>📧 contato@presentesespeciais.com.br</li>
+                        <li>📱 (11) 98765-4321</li>
+                        <li>📍 São Paulo, SP</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Presentes Especiais - Projeto Portfólio | Desenvolvido como demonstração técnica</p>
+                <p>&copy; 2026 Presentes Especiais. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -163,55 +163,13 @@
                     <span>Total:</span>
                     <span id="cartTotal">R$ 0,00</span>
                 </div>
-                <button class="btn btn-primary btn-block" onclick="openDemoCheckoutModal()">Finalizar Compra</button>
-                <p style="font-size: 0.85rem; color: #999; text-align: center; margin-top: 8px;">💡 Este é um carrinho demonstrativo</p>
+                <a href="checkout.html" class="btn btn-primary btn-block">Finalizar Compra</a>
             </div>
         </div>
     </div>
 
-    <!-- Demo Checkout Modal -->
-    <div class="demo-checkout-modal" id="demoCheckoutModal">
-        <div class="demo-checkout-content">
-            <button class="close-modal" onclick="closeDemoCheckoutModal()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            
-            <div class="demo-checkout-body">
-                <div class="demo-icon">
-                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ff9800" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M12 8v4M12 16h.01"></path>
-                    </svg>
-                </div>
-                <h3>Versão Demonstrativa</h3>
-                <p>
-                    Esta é uma versão de <strong>portfólio</strong> e não processa pagamentos reais.
-                    Você pode navegar e simular compras, mas nenhuma transação financeira será realizada.
-                </p>
-                <div class="demo-features-box">
-                    <h4>Em um site completo, você teria:</h4>
-                    <ul>
-                        <li>✅ Integração com gateways de pagamento</li>
-                        <li>✅ Processamento seguro de transações</li>
-                        <li>✅ Confirmação por e-mail e WhatsApp</li>
-                        <li>✅ Rastreamento de pedidos em tempo real</li>
-                        <li>✅ Painel administrativo para gestão</li>
-                        <li>✅ Sistema de cupons e descontos</li>
-                    </ul>
-                </div>
-                <div class="demo-cta-buttons">
-                    <p><strong>Interessado em ter um e-commerce assim?</strong></p>
-                    <button class="btn btn-primary" onclick="enviarPedidoWhatsApp()">💬 Solicitar Orçamento</button>
-                    <button class="btn btn-outline" onclick="closeDemoCheckoutModal()">Voltar à Loja</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="../js/script.js"></script>
-    <script src="../js/produto-detail.js"></script>
+    <script src="../js/script.js?v=2"></script>
+    <script src="../js/produto-detail.js?v=2"></script>
 </body>
 </html>
+
